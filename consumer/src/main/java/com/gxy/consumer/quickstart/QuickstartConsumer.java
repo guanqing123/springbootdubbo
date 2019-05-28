@@ -8,7 +8,7 @@ import com.gxy.provider.ServiceAPI;
 @Component
 public class QuickstartConsumer {
 
-	@Reference(url = "dubbo://localhost:20880")
+	@Reference(interfaceClass = ServiceAPI.class)
 	ServiceAPI serviceAPI;
 	
 	public void sendMessage(String message) {
